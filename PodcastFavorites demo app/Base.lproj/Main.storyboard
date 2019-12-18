@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ex-Aw-lxm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite Podcasts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FavoritesViewController" customModule="PodcastFavorites_demo_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZbV-AB-JnK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CN4-nF-iRE">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CN4-nF-iRE" id="sVc-3g-As1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZbV-AB-JnK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K3K-f1-UcS"/>
+                            <constraint firstItem="ZbV-AB-JnK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QCm-ea-p9O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZbV-AB-JnK" secondAttribute="bottom" id="QFW-zE-2hB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZbV-AB-JnK" secondAttribute="trailing" id="tja-vd-CN2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite Podcasts" id="SmU-pc-KeY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="-557"/>
+        </scene>
+        <!--List of Podcasts-->
+        <scene sceneID="4ze-dx-yeH">
+            <objects>
+                <viewController id="REV-rN-glR" customClass="PodcastViewController" customModule="PodcastFavorites_demo_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gaz-OS-hzf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-vg-eYH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cCI-6w-giI">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="podcastCell" rowHeight="174" id="HvO-PD-oeV" customClass="PodcastCell" customModule="PodcastFavorites_demo_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HvO-PD-oeV" id="pj7-1C-v4J">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIb-VP-kc2">
+                                                    <rect key="frame" x="28" y="19" width="243" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31L-si-njW">
+                                                    <rect key="frame" x="28" y="47.5" width="243" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2I-7w-ghm">
+                                                    <rect key="frame" x="28" y="76" width="243" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n6c-gE-Btm">
+                                                    <rect key="frame" x="279" y="8" width="127" height="158"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="n6c-gE-Btm" firstAttribute="leading" secondItem="31L-si-njW" secondAttribute="trailing" constant="8" id="6aD-px-YUg"/>
+                                                <constraint firstItem="n6c-gE-Btm" firstAttribute="leading" secondItem="fIb-VP-kc2" secondAttribute="trailing" constant="8" id="7TX-wt-gMD"/>
+                                                <constraint firstItem="31L-si-njW" firstAttribute="top" secondItem="fIb-VP-kc2" secondAttribute="bottom" constant="8" id="7VT-tJ-SDD"/>
+                                                <constraint firstItem="z2I-7w-ghm" firstAttribute="leading" secondItem="pj7-1C-v4J" secondAttribute="leadingMargin" constant="8" id="Awz-sv-f0G"/>
+                                                <constraint firstAttribute="bottom" secondItem="n6c-gE-Btm" secondAttribute="bottom" constant="8" id="C1M-ok-l23"/>
+                                                <constraint firstItem="fIb-VP-kc2" firstAttribute="leading" secondItem="pj7-1C-v4J" secondAttribute="leadingMargin" constant="8" id="D9v-f8-tkf"/>
+                                                <constraint firstItem="n6c-gE-Btm" firstAttribute="leading" secondItem="z2I-7w-ghm" secondAttribute="trailing" constant="8" id="KcY-Tn-TnM"/>
+                                                <constraint firstAttribute="trailing" secondItem="n6c-gE-Btm" secondAttribute="trailing" constant="8" id="Rar-51-HBg"/>
+                                                <constraint firstItem="n6c-gE-Btm" firstAttribute="top" secondItem="pj7-1C-v4J" secondAttribute="top" constant="8" id="eiy-YH-Itp"/>
+                                                <constraint firstItem="n6c-gE-Btm" firstAttribute="width" secondItem="pj7-1C-v4J" secondAttribute="width" multiplier="0.306763" id="jn3-2O-wVk"/>
+                                                <constraint firstItem="fIb-VP-kc2" firstAttribute="top" secondItem="pj7-1C-v4J" secondAttribute="topMargin" constant="8" id="sCG-e8-Nuh"/>
+                                                <constraint firstItem="31L-si-njW" firstAttribute="leading" secondItem="pj7-1C-v4J" secondAttribute="leadingMargin" constant="8" id="yy0-B0-eP4"/>
+                                                <constraint firstItem="z2I-7w-ghm" firstAttribute="top" secondItem="31L-si-njW" secondAttribute="bottom" constant="8" id="zF4-5T-RJr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistNameLabel" destination="31L-si-njW" id="GcJ-G9-vj6"/>
+                                            <outlet property="collectionNameLabel" destination="fIb-VP-kc2" id="rLM-OY-Tdq"/>
+                                            <outlet property="genreLabel" destination="z2I-7w-ghm" id="dgN-rt-YAV"/>
+                                            <outlet property="podcastImage" destination="n6c-gE-Btm" id="Gul-vn-NXS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a2y-vg-eYH" firstAttribute="trailing" secondItem="A45-AE-Qs6" secondAttribute="trailing" id="M3j-PN-Aq2"/>
+                            <constraint firstItem="cCI-6w-giI" firstAttribute="top" secondItem="a2y-vg-eYH" secondAttribute="bottom" id="Qdw-bK-YsU"/>
+                            <constraint firstItem="cCI-6w-giI" firstAttribute="top" secondItem="a2y-vg-eYH" secondAttribute="bottom" id="ZtS-h6-7wb"/>
+                            <constraint firstItem="a2y-vg-eYH" firstAttribute="top" secondItem="A45-AE-Qs6" secondAttribute="top" id="aWl-70-dtz"/>
+                            <constraint firstItem="cCI-6w-giI" firstAttribute="trailing" secondItem="A45-AE-Qs6" secondAttribute="trailing" id="hlB-Q1-2TK"/>
+                            <constraint firstItem="cCI-6w-giI" firstAttribute="bottom" secondItem="A45-AE-Qs6" secondAttribute="bottom" id="iir-QX-MEK"/>
+                            <constraint firstItem="a2y-vg-eYH" firstAttribute="leading" secondItem="A45-AE-Qs6" secondAttribute="leading" id="uR2-p2-vaf"/>
+                            <constraint firstItem="cCI-6w-giI" firstAttribute="leading" secondItem="A45-AE-Qs6" secondAttribute="leading" id="xAr-8R-b8v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A45-AE-Qs6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="List of Podcasts" id="dUg-va-oUQ"/>
+                    <connections>
+                        <outlet property="podcastTableView" destination="cCI-6w-giI" id="MvN-8I-oM3"/>
+                        <outlet property="searchbar" destination="a2y-vg-eYH" id="SQt-yY-rgt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Zj-eD-zIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="98"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bdz-ZE-9y4">
+            <objects>
+                <viewController id="EBH-Zc-JxO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="99n-rj-uFp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kw-vD-GrI">
+                                <rect key="frame" x="87" y="98" width="240" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Collection Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ0-10-e3L">
+                                <rect key="frame" x="144" y="363" width="126" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG9-IM-uUR">
+                                <rect key="frame" x="186" y="491" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t37-z5-BlL">
+                                <rect key="frame" x="186" y="692" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-Bt-up2">
+                                <rect key="frame" x="162" y="438" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oD0-iA-e9v"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h56-CS-4gA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="-149.33035714285714"/>
+        </scene>
+        <!--My Favs-->
+        <scene sceneID="afV-iG-4NS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0hp-st-XyO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Favs" image="music.note" catalog="system" id="c5p-K4-MSC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nEx-X6-g74">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dmU-vb-4gF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PwQ-Sa-meS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-557"/>
+        </scene>
+        <!--Podcast List-->
+        <scene sceneID="bce-33-6f9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ozc-to-cHo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Podcast List" selectedImage="music.note.list" catalog="system" id="E5O-DO-DqQ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bfU-MX-OjB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E69-pA-f3r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="REV-rN-glR" kind="relationship" relationship="rootViewController" id="eMx-VN-moL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p58-9J-gJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="98"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OeE-Jv-BiT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0Ex-Aw-lxm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wqI-cS-NeN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ozc-to-cHo" kind="relationship" relationship="viewControllers" id="KUf-kg-p0a"/>
+                        <segue destination="0hp-st-XyO" kind="relationship" relationship="viewControllers" id="V7k-1d-vMC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryb-4f-8Ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-616" y="-210"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="music.note" catalog="system" width="48" height="64"/>
+        <image name="music.note.list" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
